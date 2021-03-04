@@ -1,0 +1,30 @@
+---
+title: "Data Cleaning"
+author: 'Null'
+date: "3/4/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+```{r}
+dyad <- read.csv("~/Desktop/PSY364/csv/TeleCom_Dyad_dailydiary.csv")
+
+premeasures <- read.csv("~/Desktop/PSY364/csv/TeleCom_Dyad_premeasures.csv")
+```
+
+```{r}
+dyad_clean <- dyad %>%
+  select(dyadID, partID, RecordedDate, gender, finances, fair_chores, satisfied_chores)
+
+premeasures_clean <- premeasures %>%
+  select(dyadID, ResponseId, Q138, birthday, sexualor, conservatism, gender)
+```
+
+```{r}
+#Merging our two data sets together
+merged_data <- merge(dyad_clean,premeasures_clean,by=c("dyadID","gender"))
+```
