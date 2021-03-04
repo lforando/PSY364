@@ -1,6 +1,6 @@
 # PSY364
 
-### One-page Project Proposal (5% of grade) - due March 12
+#### One-page Project Proposal (5% of grade) - due March 12
 You will submit a one-page proposal outlining which variables you will be using, your basic research
 questions, and a set of articles you plan to read for your annotated bibliography. 
 
